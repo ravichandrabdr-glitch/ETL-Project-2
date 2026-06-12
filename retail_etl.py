@@ -8,7 +8,7 @@ project_root = Path(__file__).resolve().parent
 spark = SparkSession.builder \
     .appName("Retail_ETL") \
     .getOrCreate()
-
+# customers file
 customers = spark.read.csv(
     str(project_root / "data" / "customers.csv"),
     header=True,
